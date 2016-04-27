@@ -1,6 +1,6 @@
 <?php
 	$loginUrl = 'http://cn.v2ex.com/signin';			//登陆入口
-	$v2ex = new v2ex('otokaze','cjr0123456789O');		//你的账号密码，请符合v2ex的用户名规范
+	$v2ex = new v2ex('otokaze','');		//你的账号密码，请符合v2ex的用户名规范
 	if(!is_file($v2ex->CookiePath)){					//对已有登陆状态cookie的账号，程序会自动跳过登陆
 		file_put_contents($v2ex->CookiePath,'');
 		$v2ex->getOnceAndSession($loginUrl);			//获取初始状态的once值以及SESSIONID	
